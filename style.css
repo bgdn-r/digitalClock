@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainTransition: all 0.5s linear;
+  --mainText: #444;
+  --mainBackground: #222;
+  --mainColor: #3de2ff;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 8rem;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  background: var(--mainBackground);
+}
+
+.main-page {
+  position: relative;
+  font-size: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--mainColor);
+  height: 100%;
+  width: 100%;
+}
+.clock-holder {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px 20px;
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.11));
+}
+.time,
+.date {
+  display: flex;
+  justify-content: center;
+}
+.date {
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+.weekdays {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.day-holder {
+  letter-spacing: 3px;
+  margin: 0px 2px;
+  color: var(--mainText);
+  display: inline-flex;
+  justify-content: center;
+  width: 3.5rem;
+  border-bottom: 1px solid #333;
+}
+.hour,
+.min,
+.sec {
+  border: 1px solid var(--mainText);
+  border-radius: 10px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+}
+/* Classes for adding */
+.slash {
+  color: var(--mainText);
+}
+.colored {
+  color: var(--mainColor);
+  border-bottom: 1px solid var(--mainColor);
+}
+.colored2 {
+  color: red;
+  border-bottom: 1px solid red;
+}
+.hidden {
+  display: none;
+}
+.clock-holder:hover {
+  transition: 0.2s linear;
+  border: 2px solid var(--mainColor);
+}
+
+.btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid var(--mainColor);
+  background: var(--mainBackground);
+  cursor: pointer;
+  color: var(--mainColor);
+}
+.btn:focus {
+  outline: #333;
+}
+.btn:hover {
+  background: var(--mainColor);
+  color: var(--mainBackground);
+  transition: var(--mainTransition);
+  border: 2px solid var(--mainBackground);
+}
+@media (max-width: 560px) {
+  .main-page {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: row; */
+  }
+  .clock-holder {
+    width: 300px;
+    flex-direction: column;
+  }
+  .date {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .time {
+    display: flex;
+    flex-direction: column;
+  }
+  .day-holder {
+    margin-top: 12px;
+  }
+  #column {
+    display: none;
+  }
+  .weekdays {
+    display: flex;
+    flex-direction: column;
+    padding: 50%;
+  }
+  .time-weekdays {
+    display: flex;
+  }
+  .btn {
+    top: 5px;
+    right: 5px;
+  }
+}
+/* ------------------------------------------  */

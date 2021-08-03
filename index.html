@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=ZCOOL+QingKe+HuangYou&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <section class="main-page">
+      <div class="clock-holder">
+        <div class="date">
+          <div class="day"></div>
+          <span class="slash">/</span>
+          <div class="month"></div>
+          <span class="slash">/</span>
+          <div class="year"></div>
+        </div>
+        <div class="time-weekdays">
+          <div class="time">
+            <div class="hour"></div>
+            <span id="column">:</span>
+            <div class="min"></div>
+            <span id="column">:</span>
+            <div class="sec"></div>
+          </div>
+          <div>
+            <div class="weekdays">
+              <span class="day-holder" id="sun">Sun</span>
+              <span class="day-holder" id="mon">Mon</span>
+              <span class="day-holder" id="tue">Tue</span>
+              <span class="day-holder" id="wed">Wed</span>
+              <span class="day-holder" id="thu">Thu</span>
+              <span class="day-holder" id="fri">Fri</span>
+              <span class="day-holder" id="sat">Sat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button class="btn" id="btn">Change Color</button>
+    <script src="clock.js"></script>
+  </body>
+</html>
